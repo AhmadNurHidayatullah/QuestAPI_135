@@ -42,6 +42,7 @@ import com.example.consumerestapi.ui.customwidget.CostumeTopAppBar
 import com.example.consumerestapi.ui.navigation.DestinasiNavigasi
 import com.example.consumerestapi.ui.viewmodel.HomeUiState
 import com.example.consumerestapi.ui.viewmodel.HomeViewModel
+import com.example.consumerestapi.ui.viewmodel.PenyediaViewModel
 
 object DestinasiHome : DestinasiNavigasi{
     override val route = "home"
@@ -82,7 +83,7 @@ fun HomeScreen(
         HomeStatus(
             homeUiState = viewModel.mhsUiState,
             retryAction = { viewModel.getMhs()}, modifier = Modifier.padding(innerPadding),
-            onDetailClick = onDetailClick, onDetailClick = {
+            onDetailClick = onDetailClick, onDeleteClick = {
                 viewModel.deleteMhs(it.nim)
                 viewModel.getMhs()
             }
@@ -118,7 +119,7 @@ fun HomeStatus(
                     }
                 )
             }
-        is HomeUiState.Error-> onError(retryAction,modifier = modifier.fillMaxSize())
+        is HomeUiState.Error-> OnError(retryAction,modifier = modifier.fillMaxSize())
     }
 }
 
@@ -152,7 +153,7 @@ fun OnError(retryAction: () -> Unit, modifier: Modifier){
 fun MhsLayout(
     mahasiswa: List<Mahasiswa>,
     modifier: Modifier = Modifier,
-    onDeleteClick: (Mahasiswa) -> Unit,
+    onDetailClick: (Mahasiswa) -> Unit,
     onDeleteClick: (Mahasiswa) -> Unit ={}
 ){
     LazyColumn (
