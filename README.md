@@ -1,7 +1,9 @@
 <h1> Tampilan</h1>
 
 <h2> home</h2>
-(https://github.com/user-attachments/assets/fea12a1e-ae5c-4594-94c0-c31acfffdcc7)
+![image](https://github.com/user-attachments/assets/a77d0d75-f1be-4663-aa78-054b2a6bf458)
+
+<h2> tambah </h2>
 
 
 
