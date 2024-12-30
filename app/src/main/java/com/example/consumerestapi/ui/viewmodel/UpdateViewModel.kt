@@ -2,6 +2,10 @@ package com.example.consumerestapi.ui.viewmodel
 
 import com.example.consumerestapi.model.Mahasiswa
 
+data class UpdateUiState(
+    val updateUiEvent: UpdateUiEvent = UpdateUiEvent()
+)
+
 data class UpdateUiEvent(
     val nim: String = "",
     val nama: String = "",
