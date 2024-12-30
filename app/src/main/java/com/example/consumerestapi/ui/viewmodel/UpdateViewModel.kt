@@ -2,6 +2,10 @@ package com.example.consumerestapi.ui.viewmodel
 
 import com.example.consumerestapi.model.Mahasiswa
 
+fun Mahasiswa.toUpdateUiStateMhs(): UpdateUiState = UpdateUiState(
+    updateUiEvent = toUpdateUiEvent()
+)
+
 fun Mahasiswa.toUpdateUiEvent(): UpdateUiEvent = UpdateUiEvent(
     nim = nim,
     nama = nama,
