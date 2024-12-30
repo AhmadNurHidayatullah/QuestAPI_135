@@ -1,5 +1,7 @@
 <h1> Tampilan</h1>
 
 <h2> home</h2>
-![image](https://github.com/user-attachments/assets/05471d34-423c-42b7-ab16-06f430f8c906)
+![image](https://github.com/user-attachments/assets/fea12a1e-ae5c-4594-94c0-c31acfffdcc7)
+
+
 
